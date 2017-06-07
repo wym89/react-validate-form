@@ -21,6 +21,7 @@ class Form extends Component {
       <h1>the form!</h1>
         <form action="">
           <input
+            className='yesInput'
             onChange={this.props.changeHandler}
             onBlur={this.props.validateInputText}
             value={this.props.form.firstName}

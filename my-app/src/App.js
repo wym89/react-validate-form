@@ -23,18 +23,22 @@ class App extends Component {
     changeHandler(e) {
     this.setState({emailErr: false});
      this.setState({submitErr: false});
-    e.currentTarget.style.backgroundColor = 'white';
+    //e.currentTarget.style.backgroundColor = 'white';
+     e.target.className = 'yesInput';
     let form = this.state.form;
     form[e.target.name] = e.target.value;
     this.setState({form});
   }
 
   validateInputText(e){
+    //should not change dom directly 
     if(e.target.value.trim() === ''){
      // console.log('is empty');
-       e.currentTarget.style.backgroundColor = 'red';
+      // e.currentTarget.style.backgroundColor = 'red';
+      e.target.className = 'noInput';
     }else{
-      e.currentTarget.style.backgroundColor = 'white';
+     // e.currentTarget.style.backgroundColor = 'white';
+     e.target.className = 'yesInput';
     };
   }
 
